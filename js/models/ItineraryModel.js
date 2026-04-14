@@ -31,7 +31,8 @@ export class ItineraryModel {
                 icon: "anchor",
                 color: "washi-yellow",
                 desc: "Residencia histórica del Almirante Miguel Grau. Un testimonio de honor y vida republicana.",
-                coords: [-12.0475784, -77.0333729]
+                coords: [-12.0475784, -77.0333729],
+                googleMapsUrl: "https://www.google.com/maps/search/?api=1&query=-12.0475784,-77.0333729"
             },
             {
                 id: 4,
