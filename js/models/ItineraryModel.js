@@ -39,7 +39,7 @@ export class ItineraryModel {
                 icon: "map",
                 color: "washi-tape",
                 desc: "Colección única de piezas prehispánicas en pleno corazón del centro.",
-                coords: [-12.04413454245592, -77.03272212406834]
+                coords: [-12.0451718, -77.0280850]
             },
             {
                 id: 5,
