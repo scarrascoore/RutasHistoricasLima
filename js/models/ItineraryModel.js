@@ -59,7 +59,7 @@ export class ItineraryModel {
                 icon: "church",
                 color: "washi-yellow",
                 desc: "Arquitectura barroca churrigueresca. ¡La fachada tallada es impresionante!",
-                coords: [-12.04811454239592, -77.0347140240683]
+                coords: [-12.0482007, -77.0327782]
             },
             {
                 id: 7,
