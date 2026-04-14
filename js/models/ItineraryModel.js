@@ -79,7 +79,7 @@ export class ItineraryModel {
                 icon: "flower",
                 color: "washi-blue",
                 desc: "Sus claustros y azulejos sevillanos son de los más bellos de América.",
-                coords: [-12.04453454245592, -77.03372212406834]
+                coords: [-12.0441256, -77.0314728]
             },
             {
                 id: 9,
