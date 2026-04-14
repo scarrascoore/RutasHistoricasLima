@@ -97,7 +97,8 @@ export class ItineraryModel {
                 icon: "palette",
                 color: "washi-yellow",
                 desc: "Finalizamos el recorrido con el arte costumbrista que dio color a Lima.",
-                coords: [-12.0454581, -77.0311831]
+                coords: [-12.0454581, -77.0311831],
+                googleMapsUrl: "https://www.google.com/maps/search/?api=1&query=-12.0454581,-77.0311831"
             }
         ];
     }
