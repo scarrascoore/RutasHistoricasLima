@@ -2,10 +2,12 @@ export class ItineraryView {
     constructor() {
         this.listContainer = document.getElementById('itinerary-list');
         this.modalOverlay = document.getElementById('modal-overlay');
-        this.modalContentBox = document.getElementById('modal-content-box');
         this.modalTitle = document.getElementById('modal-title');
-        this.modalIframe = document.getElementById('modal-iframe');
         this.btnCloseModal = document.getElementById('btn-close-modal');
+        this.mapContainer = document.getElementById('modal-map');
+
+        this.leafletMap = null;
+        this.currentMarker = null;
     }
 
     renderCards(itineraries) {
@@ -69,19 +71,46 @@ export class ItineraryView {
         });
     }
 
-    showModal(museumData) {
-        this.modalTitle.textContent = museumData.name;
-        this.modalIframe.src = museumData.map;
+    showModal(placeData) {
+        this.modalTitle.textContent = placeData.name;
         this.modalOverlay.classList.add('active');
         document.body.style.overflow = 'hidden';
+
+        // Limpia mapa anterior si existe
+        if (this.leafletMap) {
+            this.leafletMap.remove();
+            this.leafletMap = null;
+            this.currentMarker = null;
+        }
+
+        // Espera a que el modal sea visible para calcular bien el tamaño
+        setTimeout(() => {
+            this.leafletMap = L.map(this.mapContainer).setView(placeData.coords, 17);
+
+            L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                maxZoom: 19,
+                attribution: '&copy; OpenStreetMap contributors'
+            }).addTo(this.leafletMap);
+
+            this.currentMarker = L.marker(placeData.coords)
+                .addTo(this.leafletMap)
+                .bindPopup(`<strong>${placeData.name}</strong><br>${placeData.desc}`)
+                .openPopup();
+
+            this.leafletMap.invalidateSize();
+        }, 100);
     }
 
     hideModal() {
         this.modalOverlay.classList.remove('active');
         document.body.style.overflow = 'auto';
 
-        setTimeout(() => {
-            this.modalIframe.src = '';
-        }, 300);
+        if (this.leafletMap) {
+            setTimeout(() => {
+                this.leafletMap.remove();
+                this.leafletMap = null;
+                this.currentMarker = null;
+            }, 200);
+        }
     }
 }
