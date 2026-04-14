@@ -9,7 +9,8 @@ export class ItineraryModel {
                 icon: "book-open",
                 color: "washi-tape",
                 desc: "Antigua Estación de Desamparados. Es el punto de partida perfecto para amantes de los libros.",
-                coords: [-12.0444446, -77.028765]
+                coords: [-12.0444446, -77.028765],
+                googleMapsUrl: "https://www.google.com/maps/search/?api=1&query=-12.0443046,-77.0286810"
             },
             {
                 id: 2,
