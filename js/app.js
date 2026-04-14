@@ -1,4 +1,4 @@
-import { ItineraryModel } from './models/itineraryModel.js';
+import { ItineraryModel } from './models/ItineraryModel.js';
 import { ItineraryView } from './views/ItineraryView.js';
 import { ItineraryController } from './controllers/ItineraryController.js';
 
