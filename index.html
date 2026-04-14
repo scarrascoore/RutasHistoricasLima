@@ -5,17 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bitácora: Aventura en Lima</title>
 
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Fuentes de Google -->
     <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet" />
 
-    <!-- CSS propio -->
+    <!-- Leaflet CSS -->
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+        crossorigin=""
+    />
+
     <link rel="stylesheet" href="./css/styles.css" />
 </head>
 <body>
-    <!-- Modal Flotante (VISTA) -->
     <div id="modal-overlay">
         <div class="modal-content" id="modal-content-box">
             <div class="close-modal" id="btn-close-modal">
@@ -27,23 +31,15 @@
                 <div class="h-1 w-20 bg-amber-400 mt-1"></div>
             </div>
 
+            <!-- Antes era iframe; ahora será un mapa Leaflet -->
             <div id="modal-map-container">
-                <iframe
-                    id="modal-iframe"
-                    src=""
-                    width="100%"
-                    height="100%"
-                    style="border: 0;"
-                    allowfullscreen=""
-                    loading="lazy">
-                </iframe>
+                <div id="modal-map"></div>
             </div>
 
             <p class="handwritten text-xl text-center mt-6 text-amber-900">¡Ubicación lista para tu aventura!</p>
         </div>
     </div>
 
-    <!-- Contenedor Principal (VISTA) -->
     <div class="notebook-surface max-w-7xl mx-auto p-6 md:p-12 overflow-hidden">
         <header class="relative text-center py-16 mb-20 bg-white/40 rounded-3xl border-2 border-white/50 shadow-sm">
             <div class="absolute -top-10 -right-4 md:right-10 rotate-12 z-30">
@@ -65,23 +61,26 @@
             </div>
         </header>
 
-        <div id="itinerary-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 relative z-10">
-            <!-- Renderizado dinámico -->
-        </div>
+        <div id="itinerary-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 relative z-10"></div>
 
         <footer class="mt-28 text-center pb-16">
             <div class="inline-block relative">
                 <div class="w-full h-3 bg-amber-200 absolute bottom-1 -z-10 opacity-60"></div>
                 <p class="handwritten text-5xl text-amber-900">¡Será un día inolvidable!</p>
             </div>
-            <p class="mt-6 text-[10px] uppercase tracking-widest font-black opacity-40 italic">Derechos reservados © 2026</p>
+            <p class="mt-6 text-[10px] uppercase tracking-widest font-black opacity-40 italic">Lima, la Ciudad de los Reyes</p>
         </footer>
     </div>
 
-    <!-- Iconos Lucide -->
     <script src="https://unpkg.com/lucide@latest"></script>
 
-    <!-- Inicializador MVC -->
+    <!-- Leaflet JS -->
+    <script
+        src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+        crossorigin=""
+    ></script>
+
     <script type="module" src="./js/app.js"></script>
 </body>
 </html>
