@@ -42,7 +42,8 @@ export class ItineraryModel {
                 icon: "map",
                 color: "washi-tape",
                 desc: "Colección única de piezas prehispánicas en pleno corazón del centro.",
-                coords: [-12.0451718, -77.0280850]
+                coords: [-12.0451718, -77.0280850],
+                googleMapsUrl: "https://www.google.com/maps/search/?api=1&query=-12.0451718,-77.0280850"
             },
             {
                 id: 5,
