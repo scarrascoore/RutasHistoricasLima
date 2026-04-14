@@ -53,7 +53,8 @@ export class ItineraryModel {
                 icon: "search",
                 color: "washi-blue",
                 desc: "Increíble museo de sitio que muestra los cimientos de la Lima colonial.",
-                coords: [-12.0448312, -77.0286776]
+                coords: [-12.0448312, -77.0286776],
+                googleMapsUrl: "https://www.google.com/maps/search/?api=1&query=-12.0448312,-77.0286776"
             },
             {
                 id: 6,
