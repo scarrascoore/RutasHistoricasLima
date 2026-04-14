@@ -33,9 +33,22 @@ export class ItineraryView {
                     "${item.desc}"
                 </p>
 
+                <div class="flex flex-col gap-3">
                 <button class="btn-open-map btn-expander w-full flex items-center justify-center gap-2" data-id="${item.id}">
-                    <i data-lucide="map-pin" class="w-4 h-4"></i> VER UBICACIÓN
+                    <i data-lucide="map-pin" class="w-4 h-4"></i>
+                    VER UBICACIÓN
                 </button>
+
+                <a
+                    href="${item.googleMapsUrl}"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn-expander w-full flex items-center justify-center gap-2 bg-blue-700 hover:bg-blue-800 text-white"
+                >
+                    <i data-lucide="navigation" class="w-4 h-4"></i>
+                    ABRIR EN GOOGLE MAPS
+                </a>
+            </div>
             </div>
         `).join('');
 
