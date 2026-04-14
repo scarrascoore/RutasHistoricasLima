@@ -89,7 +89,7 @@ export class ItineraryModel {
                 icon: "palette",
                 color: "washi-yellow",
                 desc: "Finalizamos el recorrido con el arte costumbrista que dio color a Lima.",
-                coords: [-12.04473454245592, -77.03272212406834]
+                coords: [-12.0454581, -77.0311831]
             }
         ];
     }
