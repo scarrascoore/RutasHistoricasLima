@@ -20,7 +20,8 @@ export class ItineraryModel {
                 icon: "history",
                 color: "washi-blue",
                 desc: "Famoso convento con laberintos subterráneos. ¡Toda una aventura bajo la ciudad!",
-                coords: [-12.0452978, -77.0274438]
+                coords: [-12.0452978, -77.0274438],
+                googleMapsUrl: "https://www.google.com/maps/search/?api=1&query=-12.0452978,-77.0274438"
             },
             {
                 id: 3,
