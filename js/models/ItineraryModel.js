@@ -64,7 +64,8 @@ export class ItineraryModel {
                 icon: "church",
                 color: "washi-yellow",
                 desc: "Arquitectura barroca churrigueresca. ¡La fachada tallada es impresionante!",
-                coords: [-12.0482007, -77.0327782]
+                coords: [-12.0482007, -77.0327782],
+                googleMapsUrl: "https://www.google.com/maps/search/?api=1&query=-12.0482007,-77.0327782"
             },
             {
                 id: 7,
