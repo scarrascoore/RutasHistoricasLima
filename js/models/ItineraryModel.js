@@ -9,7 +9,7 @@ export class ItineraryModel {
                 icon: "book-open",
                 color: "washi-tape",
                 desc: "Antigua Estación de Desamparados. Es el punto de partida perfecto para amantes de los libros.",
-                coords: [-12.04423454245592, -77.03072212406834]
+                coords: [-12.0444446, -77.028765]
             },
             {
                 id: 2,
@@ -19,7 +19,7 @@ export class ItineraryModel {
                 icon: "history",
                 color: "washi-blue",
                 desc: "Famoso convento con laberintos subterráneos. ¡Toda una aventura bajo la ciudad!",
-                coords: [-12.04523454244192, -77.0292850240683]
+                coords: [-12.0452978, -77.0274438]
             },
             {
                 id: 3,
@@ -29,7 +29,7 @@ export class ItineraryModel {
                 icon: "anchor",
                 color: "washi-yellow",
                 desc: "Residencia histórica del Almirante Miguel Grau. Un testimonio de honor y vida republicana.",
-                coords: [-12.04751454239592, -77.0341140240683]
+                coords: [-12.0475784, -77.0333729]
             },
             {
                 id: 4,
