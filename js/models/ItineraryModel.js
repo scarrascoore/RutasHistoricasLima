@@ -69,7 +69,7 @@ export class ItineraryModel {
                 icon: "home",
                 color: "washi-tape",
                 desc: "Casona restaurada por la PUCP. Centro de cultura y arte en el centro.",
-                coords: [-12.04891454239592, -77.0341140240683]
+                coords: [-12.0476222, -77.0325450]
             },
             {
                 id: 8,
